@@ -1,7 +1,10 @@
-import React from "react";
-import NavVid from "../NavVid";
-import BestPlace from "../BestPlace";
-import PopularTrips from "../PopularTrips";
+// Path: src/Home.js
+import React, { useState } from "react";
+import Navbar from "../Navbar";
+import Video from "../Video";
+import Places from "../Places"; // Adjust the path accordingly
+import OrderPopup from "../OrderPopup"; // Adjust the path accordingly
+import { PopularTrips } from "../PopularTrips";
 import MustVisitPlaces from "../MustVisitPlaces";
 import ContactBanner from "../ContactBanner";
 import MainProgram from "../MainProgram";
@@ -14,10 +17,23 @@ import WhyChooseUs from "../WhyChooseUs";
 import Footer from "../Footer";
 
 const Home = () => {
+  const [orderPopup, setOrderPopup] = useState(false);
+  const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+
+  const handleOrderPopup = (e) => {
+    setPopupPosition({ x: e.clientX, y: e.clientY });
+    setOrderPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setOrderPopup(false);
+  };
+
   return (
     <div>
-      <NavVid />
-      <BestPlace />
+      <Navbar />
+      <Video />
+      <Places handleOrderPopup={handleOrderPopup} />
       <PopularTrips />
       <MustVisitPlaces />
       <ContactBanner />
@@ -29,6 +45,14 @@ const Home = () => {
       <ContactUs />
       <WhyChooseUs />
       <Footer />
+      {/* Add OrderPopup component here */}
+      {orderPopup && (
+        <OrderPopup
+          orderPopup={orderPopup}
+          setOrderPopup={handleClosePopup}
+          position={{ top: popupPosition.y, left: popupPosition.x }}
+        />
+      )}
     </div>
   );
 };

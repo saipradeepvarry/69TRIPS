@@ -1,0 +1,189 @@
+footer {
+    padding: 1.5rem 0 0 0;
+    background-color: #f8f9fa; /* Light background color for contrast */
+    color: #000; /* Black font color */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer .container {
+    width: 90%;
+    margin: auto;
+}
+
+footer .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .socials,
+footer .newsletter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+footer .socials div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .socials div a {
+    background-color: #fff;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+}
+
+footer .socials div a:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+footer .newsletter {
+    position: relative;
+}
+
+footer .newsletter-input {
+    display: flex;
+    align-items: center;
+}
+
+footer .newsletter input {
+    padding: 1rem;
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #000;
+    width: calc(100% - 2.5rem); /* Adjust width for button */
+}
+
+footer .newsletter button {
+    padding: 1rem;
+    border: none;
+    background-color: #000;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+}
+
+footer .newsletter button img {
+    height: 1.5rem;
+}
+
+footer hr {
+    background-color: #000;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+footer .middle-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    footer .middle-section {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        text-align: left;
+    }
+}
+
+footer .company-info,
+footer .contact,
+footer .company,
+footer .resource {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    footer .company-info,
+    footer .contact,
+    footer .company,
+    footer .resource {
+        align-items: flex-start;
+    }
+}
+
+footer .company-info img {
+    align-self: center;
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+
+footer .company-info p,
+footer .contact a,
+footer .company a,
+footer .resource a {
+    font-size: 0.85rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .contact a:hover,
+footer .company a:hover,
+footer .resource a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+footer .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    footer .bottom-section {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+footer .payment-methods {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+footer .payment-methods p {
+    margin-right: 1rem;
+}
+
+footer .payment-methods img {
+    width: 3rem;
+    max-height: 1rem;
+    margin-right: 0.5rem;
+}
+.mainheading{
+    color: #000;
+    font-weight: bold;
+}

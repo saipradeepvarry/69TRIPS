@@ -1,0 +1,145 @@
+:root {
+  --delay: 400ms;
+  --box-bg: hsla(0, 0%, 0%, 0.459);
+  --small: 600px;
+  --medium: 786px;
+  --primary-color: #e34352;
+  --secondary-color: #333;
+  --text-color: black;
+}
+
+/* Main styles */
+.experience {
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: var(--text-color);
+  margin-top: 0; /* Ensure no top margin */
+}
+
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experienceCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  min-width: 90vw;
+  width: 90vw;
+  margin-top: 2.5rem;
+}
+
+/* Responsive layout */
+@media screen and (max-width: var(--small)) {
+  .experienceCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card styles */
+.expCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+}
+
+.expName {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  width: 100%;
+  background: var(--box-bg);
+  color: rgba(255, 255, 255, 0.877);
+}
+
+.upper {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 0%;
+  transform-origin: 100% 0%;
+  transform: rotate(90deg);
+  user-select: none;
+  pointer-events: none;
+  background: var(--box-bg);
+  transition: all var(--delay) ease-out;
+}
+
+.lower {
+  pointer-events: none;
+  user-select: none;
+  height: 50%;
+  bottom: 0%;
+  position: absolute;
+  width: 100%;
+  transform-origin: 0% 100%;
+  transform: rotate(90deg);
+  background: var(--box-bg);
+  transition: all var(--delay) ease-out;
+}
+
+.hoverName {
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  z-index: 2;
+  transform: scale(0.1);
+  transition: all 60ms ease-out;
+}
+
+.expCard:hover {
+  cursor: pointer;
+}
+
+.expCard:hover .hoverName {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 400ms;
+  transition-delay: var(--delay);
+}
+
+.expCard:hover .upper {
+  transform: rotate(0deg);
+}
+
+.expCard:hover .lower {
+  transform: rotate(0deg);
+}

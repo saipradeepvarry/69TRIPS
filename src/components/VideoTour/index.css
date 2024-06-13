@@ -1,0 +1,89 @@
+.video-tour {
+    background-color: white;
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .video-tour-head {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .video-tour-head {
+      font-size: 25px;
+      padding-left: 15px;
+    }
+  }
+  
+  .video-tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .video-wrapper {
+    flex: 1 1 30%;
+    margin: 10px;
+    max-width: 30%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  .video-wrapper.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .video-wrapper.hide {
+    transform: scale(0);
+    opacity: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .video-wrapper {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin: 30px 0;
+    }
+  }
+  
+  .styled-react-player {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .styled-react-player > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,148 @@
+/* ExploreAll.css */
+.explore-all-container {
+  min-height: 550px;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .content-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.travel-image {
+  max-width: 400px;
+  height: auto;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 15px;
+}
+
+.travel-image:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.animated-image {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .text-section {
+    padding-left: 4rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.75;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-wrapper {
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.violet-bg {
+  background-color: #e9d5ff;
+}
+
+.green-bg {
+  background-color: #d1fae5;
+}
+
+.orange-bg {
+  background-color: #fed7aa;
+}
+
+.yellow-bg {
+  background-color: #fef3c7;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.violet-text {
+  color: #7c3aed;
+}
+
+.green-text {
+  color: #10b981;
+}
+
+.orange-text {
+  color: #f97316;
+}
+
+.yellow-text {
+  color: #f59e0b;
+}
+
+.icon-text {
+  color: #1f2937;
+}

@@ -1,7 +1,61 @@
 import React from "react";
+import './index.css';
+import TravelImg from "../../assets/travelbox.png";
+import { MdFlight, MdOutlineLocalHotel } from "react-icons/md";
+import { IoIosWifi } from "react-icons/io";
+import { IoFastFoodSharp } from "react-icons/io5";
 
 const ExploreAll = () => {
-  return <div>ExploreAll</div>;
+  return (
+    <div className="explore-all-container">
+      <div className="content-wrapper">
+        {/* Image section */}
+        <div className="image-section" data-aos="flip-up">
+          <img
+            src={TravelImg}
+            alt="Travel"
+            className="travel-image animated-image"
+          />
+        </div>
+        {/* Text content section */}
+        <div className="text-section">
+          <h1 className="title" data-aos="fade-up">
+            Explore all corners of the world with us
+          </h1>
+          <p className="description" data-aos="fade-up">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            doloremque in mollitia dicta deleniti molestiae itaque nostrum.
+          </p>
+          <div className="icon-grid" data-aos="zoom-in">
+            <div className="icon-item">
+              <div className="icon-wrapper violet-bg">
+                <MdFlight className="icon violet-text" />
+              </div>
+              <p className="icon-text">Flight</p>
+            </div>
+            <div className="icon-item">
+              <div className="icon-wrapper green-bg">
+                <IoIosWifi className="icon green-text" />
+              </div>
+              <p className="icon-text">Wi-Fi</p>
+            </div>
+            <div className="icon-item">
+              <div className="icon-wrapper orange-bg">
+                <MdOutlineLocalHotel className="icon orange-text" />
+              </div>
+              <p className="icon-text">Hotel</p>
+            </div>
+            <div className="icon-item">
+              <div className="icon-wrapper yellow-bg">
+                <IoFastFoodSharp className="icon yellow-text" />
+              </div>
+              <p className="icon-text">Foods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ExploreAll;
