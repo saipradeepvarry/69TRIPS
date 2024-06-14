@@ -1,0 +1,7 @@
+.dcontainer {
+  display: flex;
+}
+
+.d-cards {
+  width: 100%;
+}
