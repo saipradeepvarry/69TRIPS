@@ -1,12 +1,12 @@
 /* index.css */
 .main-program-section {
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 4rem 0; /* Adjust top and bottom padding */
-    text-align: center;
-    margin-bottom: 0; /* Ensure no margin at the bottom */
-  }
-  
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 4rem 0; /* Adjust top and bottom padding */
+  text-align: center;
+  margin-bottom: 0; /* Ensure no margin at the bottom */
+}
+
 .main-program-section {
   background-color: #f2f2f2; /* Light gray background */
   color: #333; /* Darker text color */
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.container {
+.container1 {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -37,7 +37,7 @@
 
 .program {
   position: relative;
-  background-color: #4CAF50; /* Green background for cards */
+  background-color: #4caf50; /* Green background for cards */
   color: #fff; /* White text color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
   padding: 1.5rem;
@@ -55,10 +55,11 @@
 }
 
 .program:hover {
-  transform: rotateY(180deg); /* Rotate card 180 degrees on hover */
+  transform: rotateY(360deg); /* Rotate card 180 degrees on hover */
 }
 
-.front-face, .back-face {
+.front-face,
+.back-face {
   position: absolute;
   top: 0;
   left: 0;
@@ -96,7 +97,7 @@
 .about-btn {
   display: inline-block;
   padding: 1.5rem 3rem;
-  background-color: #4CAF50; /* Green button color */
+  background-color: #4caf50; /* Green button color */
   color: #fff;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -104,7 +105,7 @@
   border-radius: 4px; /* Rounded corners */
   transition: background-color 0.3s ease-in-out;
   margin-top: 2rem; /* Space above button */
-  border: 2px solid #4CAF50; /* Green border */
+  border: 2px solid #4caf50; /* Green border */
   position: relative;
   overflow: hidden;
 }
@@ -133,23 +134,27 @@
   z-index: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 786px) {
   .program {
-    width: calc((100% - 4rem) / 4); /* Adjust card width for smaller viewports */
+    width: 44%;
+    margin: 0px; /* Space below each card */
   }
-}
-
-@media (max-width: 992px) {
-  .program {
-    width: calc((100% - 4rem) / 3); /* Further adjust card width for medium-sized screens */
+  .program-title {
+    font-size: 20px;
   }
-}
+  .program-description {
+    font-size: 15px;
+  }
+  .program-image {
+    width: 70px;
+  }
 
-@media (max-width: 768px) {
-  .program {
-    width: calc(100% - 4rem); /* Adjust card width for smaller screens */
-    margin-right: 0; /* Remove margin between cards */
-    margin-bottom: 1.5rem; /* Space below each card */
+  .program-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
   }
 
   .about-btn {
