@@ -52,7 +52,7 @@ const MainProgram = () => {
             </p>
           </div>
         </div>
-        <a href="#">
+        <a href="https://tripplannercompany.vercel.app/#recommend">
           <span className="about-btn">Discover Our Tours</span>
         </a>
       </div>

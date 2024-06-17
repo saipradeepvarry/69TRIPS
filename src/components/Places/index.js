@@ -25,64 +25,91 @@ const Places = () => {
 
   return (
     <div>
-      <section data-aos="fade-up" className="container">
+      <section data-aos="fade-up" className="container" id="recommend">
         <h1 className="my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
-          Best Places to Visit
+          Best Places to Visit in India
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img1}
-            title="Boat"
-            location="USA"
-            description="lorem ipsum dolor sit amet consectetur adipisicing elit."
+            title="Backwaters of Kerala"
+            location="Kerala, India"
+            description="Explore the serene backwaters and lush greenery of Kerala on a traditional boat ride."
             price={2700}
-            type="Cultural Relax"
+            type="Nature and Culture"
           />
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img2}
             title="Taj Mahal"
-            location="India"
-            description="The Taj Mahal is an ivory-white marble mausoleum on the south bank of the river Yamuna in the Indian city of Agra."
+            location="Agra, India"
+            description="Visit the iconic Taj Mahal, an ivory-white marble mausoleum on the south bank of the Yamuna river."
             price={2500}
-            type="Cultural Relax"
+            type="Cultural Heritage"
           />
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img3}
-            title="Underwater"
-            location="US"
-            description="The Taj Mahal is an ivory-white marble mausoleum on the south bank of the river Yamuna in the Indian city of Agra."
+            title="Andaman Beaches"
+            location="Andaman and Nicobar Islands, India"
+            description="Discover the pristine beaches and vibrant marine life of the Andaman Islands."
             price={3200}
-            type="Cultural Relax"
+            type="Beach Adventure"
           />
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img4}
-            title="Sydney"
-            location="USA"
-            description="lorem ipsum dolor sit amet consectetur adipisicing elit."
+            title="Goa Nightlife"
+            location="Goa, India"
+            description="Experience the sun-kissed beaches and vibrant nightlife of Goa."
             price={3500}
-            type="Cultural Relax"
+            type="Beach Party"
           />
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img5}
-            title="Los Angeles"
-            location="United states"
-            description="The Taj Mahal is an ivory-white marble mausoleum on the south bank of the river Yamuna in the Indian city of Agra."
+            title="Ladakh Landscapes"
+            location="Ladakh, India"
+            description="Embark on an adventure to Ladakh and experience its breathtaking landscapes and rich culture."
             price={4000}
-            type="Cultural Relax"
+            type="Mountain Adventure"
           />
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img6}
-            title="Los Vegas"
-            location="California"
-            description="The Taj Mahal is an ivory-white marble mausoleum on the south bank of the river Yamuna in the Indian city of Agra."
+            title="Jaipur Palaces"
+            location="Jaipur, India"
+            description="Explore the royal palaces and vibrant history of Jaipur, the Pink City."
             price={3200}
-            type="Cultural Relax"
+            type="Cultural Heritage"
+          />
+           <PlaceCard
+            handleOrderPopup={handleOrderPopup}
+            img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637286/OIP_2_ahhlj2.jpg"
+            title="Mysore Palace"
+            location="Mysore, Karnataka"
+            description="Visit the grand Mysore Palace, a historical royal residence known for its architecture and cultural significance."
+            price={3100}
+            type="Royal Heritage"
+          />
+          <PlaceCard
+            handleOrderPopup={handleOrderPopup}
+            img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637287/1560622581_1560622568625_ka7joa.jpg"
+            title="Shimla Hills"
+            location="Shimla, Himachal Pradesh"
+            description="Enjoy the scenic beauty and colonial charm of Shimla amidst the Himalayan foothills."
+            price={3000}
+            type="Hill Station Retreat"
+          />
+          <PlaceCard
+            handleOrderPopup={handleOrderPopup}
+            img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637288/R_d42kkr.jpg"
+            title="Hampi Temples"
+            location="Hampi, Karnataka"
+            description="Explore the ancient ruins and majestic temples of Hampi, Karnataka."
+            price={2800}
+            type="Historical and Cultural"
           />
         </div>
       </section>

@@ -187,3 +187,7 @@ footer .payment-methods img {
     color: #000;
     font-weight: bold;
 }
+.mainheading-text {
+    font-weight: bold;
+    padding-bottom: 3px;
+}

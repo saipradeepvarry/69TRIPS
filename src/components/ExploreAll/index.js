@@ -20,18 +20,19 @@ const ExploreAll = () => {
         {/* Text content section */}
         <div className="text-section">
           <h1 className="title" data-aos="fade-up">
-            Explore all corners of the world with us
+            Discover the World with 69 Trips
           </h1>
           <p className="description" data-aos="fade-up">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            doloremque in mollitia dicta deleniti molestiae itaque nostrum.
+            At 69 Trips, we specialize in creating unforgettable travel
+            experiences. From exotic destinations to luxury accommodations,
+            we've got you covered.
           </p>
           <div className="icon-grid" data-aos="zoom-in">
             <div className="icon-item">
               <div className="icon-wrapper violet-bg">
                 <MdFlight className="icon violet-text" />
               </div>
-              <p className="icon-text">Flight</p>
+              <p className="icon-text">Flights</p>
             </div>
             <div className="icon-item">
               <div className="icon-wrapper green-bg">
@@ -43,13 +44,13 @@ const ExploreAll = () => {
               <div className="icon-wrapper orange-bg">
                 <MdOutlineLocalHotel className="icon orange-text" />
               </div>
-              <p className="icon-text">Hotel</p>
+              <p className="icon-text">Hotels</p>
             </div>
             <div className="icon-item">
               <div className="icon-wrapper yellow-bg">
                 <IoFastFoodSharp className="icon yellow-text" />
               </div>
-              <p className="icon-text">Foods</p>
+              <p className="icon-text">Food & Dining</p>
             </div>
           </div>
         </div>

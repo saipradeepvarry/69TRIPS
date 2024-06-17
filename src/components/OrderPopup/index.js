@@ -1,6 +1,6 @@
 import React from "react";
-import './index.css';
 import { IoCloseOutline } from "react-icons/io5";
+import './index.css';
 
 const OrderPopup = ({ orderPopup, setOrderPopup }) => {
   return (
@@ -8,17 +8,16 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
       {orderPopup && (
         <div className="h-screen w-screen fixed top-0 left-0 bg-black/50 z-50 backdrop-blur-sm">
           <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 shadow-md bg-white dark:bg-gray-900 rounded-md duration-200 w-[300px]">
-            {" "}
             {/* Header */}
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-xl font-semibold text-black/70">
+                <h1 className="text-xl font-semibold text-black/70 text-black dark:text-white">
                   Book Your Trip
                 </h1>
               </div>
               <div>
                 <IoCloseOutline
-                  className="text-2xl cursor-pointer"
+                  className="text-2xl cursor-pointer text-black font-bold hover:text-black"
                   onClick={() => setOrderPopup(false)}
                 />
               </div>
@@ -28,17 +27,17 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4"
+                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4 text-black dark:text-white"
               />
               <input
                 type="email"
-                placeholder="email"
-                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4"
+                placeholder="Email"
+                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4 text-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="Address"
-                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4"
+                className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4 text-black dark:text-white"
               />
               <div className="flex justify-center">
                 <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-black py-1 px-4 rounded-full ">

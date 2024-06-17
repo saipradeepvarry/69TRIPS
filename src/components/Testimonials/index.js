@@ -8,19 +8,19 @@ const testimonialData = [
   {
     id: 1,
     name: "Samuel",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "69 Trips provided an unforgettable travel experience. The seamless booking process and exceptional customer service made our vacation truly special.",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
     name: "John Doe",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "From start to finish, 69 Trips exceeded our expectations.Their attention to detail and personalized travel plans made our journey enjoyable.",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
     name: "Smith",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "Thanks to 69 Trips, we had the adventure of a lifetime. The curated itineraries and insider tips ensured we made the most of every moment.",
     img: "https://picsum.photos/103/103",
   },
 ];
@@ -57,15 +57,14 @@ const Testimonials = () => {
   };
 
   return (
+  <section id="testimonials">
     <div className="testimonials-section">
       <div className="container">
         <div className="header-section">
           <p className="subheading">Testimonial</p>
           <h1 className="heading">What Our Clients Say</h1>
           <p className="description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-            nesciunt explicabo a! Laborum delectus aliquam labore, earum rerum
-            quam! Nulla?
+            Discover why our clients love traveling with 69 Trips. We provide exceptional travel experiences tailored to your desires. Let us help you create unforgettable memories.
           </p>
         </div>
         <div className="slider-section">
@@ -84,6 +83,7 @@ const Testimonials = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
