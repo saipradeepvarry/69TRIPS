@@ -213,6 +213,7 @@ const ContactUs = () => {
   }
 
   return (
+  <section id="contactus">
     <Container>
       <FormWrapper>
         <Form onSubmit={handleLogin}>
@@ -293,6 +294,7 @@ const ContactUs = () => {
         </Form>
       </FormWrapper>
     </Container>
+    </section>
   );
 }
 

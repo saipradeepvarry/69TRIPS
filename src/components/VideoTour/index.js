@@ -26,7 +26,7 @@ const VideoTour = () => {
         {videos.map((video, index) => (
           <div
             key={index}
-            className={`video-wrapper ${playingIndex === null || playingIndex === index ? "show" : "hide"}`}
+            className={`video-wrapper ${playingIndex === null || playingIndex === index ? "show" : "show"}`}
           >
             <div className="styled-react-player">
               <ReactPlayer

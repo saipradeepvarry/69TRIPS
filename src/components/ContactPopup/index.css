@@ -1,0 +1,129 @@
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Container for the entire popup */
+  .ContactPopupContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  /* Background overlay */
+  .BackgroundOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Popup content */
+  .PopupContainer {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-out;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .PopupHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  .CloseButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s;
+    padding: 5px;
+  }
+  
+  .CloseButton:hover {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .ContactList {
+    margin-top: 20px;
+  }
+  
+  .ContactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .ContactItem:hover {
+    color: #4CAF50; /* Green color on hover */
+  }
+  
+  .ContactItem:hover svg {
+    animation: bounce 1s infinite;
+  }
+  
+  .ContactItem svg {
+    font-size: 24px;
+    transition: transform 0.3s;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .PopupContainer {
+      width: 95%;
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .PopupContainer {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  

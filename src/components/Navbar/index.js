@@ -56,7 +56,7 @@ export default function Navbar() {
             <a href="#testimonials">Testimonials</a>
           </li>
         </ul>
-        <button className="connect-btn">Connect</button>
+        <a href="#contactus" className="connect-btn">Connect</a>
       </nav>
       <div className={`responsive-nav ${navbarState ? "open" : ""}`}>
         <div className="close-btn" onClick={closeNavbar}>
@@ -82,6 +82,11 @@ export default function Navbar() {
             <a href="#testimonials" onClick={closeNavbar}>
               Testimonials
             </a>
+          </li>
+          <li>
+          <a href="#contactus" className="connect-btn" onClick={closeNavbar}>
+            Connect
+          </a>
           </li>
         </ul>
       </div>
