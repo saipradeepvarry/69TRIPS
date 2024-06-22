@@ -77,9 +77,9 @@ const Places = () => {
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img={Img6}
-            title="Jaipur Palaces"
-            location="Jaipur, India"
-            description="Explore the royal palaces and vibrant history of Jaipur, the Pink City."
+            title="Ooty"
+            location="Ooty, India"
+            description="Explore the royal palaces and vibrant history of Ooty, the cold City."
             price={3200}
             type="Cultural Heritage"
           />
@@ -96,8 +96,8 @@ const Places = () => {
             handleOrderPopup={handleOrderPopup}
             img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637287/1560622581_1560622568625_ka7joa.jpg"
             title="Kashmir"
-            location="Shimla, Himachal Pradesh"
-            description="Enjoy the scenic beauty and colonial charm of Shimla amidst the Himalayan foothills."
+            location="Kashmir, Himachal Pradesh"
+            description="Enjoy the scenic beauty and colonial charm of kashmir amidst the Himalayan foothills."
             price={3000}
             type="Hill Station Retreat"
           />

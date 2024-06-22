@@ -12,7 +12,7 @@ const PlaceCard = ({
 }) => {
   const handleContactUs = (e) => {
     e.stopPropagation(); // Prevent triggering handleOrderPopup
-    const message = `Hello, I am interested in ${title}. Can you provide more details?`;
+    const message = `Hello, I am interested in ${title} ,Can you provide more details?`;
     const whatsappUrl = `https://wa.me/+919032302468?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
