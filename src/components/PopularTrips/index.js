@@ -25,13 +25,13 @@ const duration = {
     { img: coast, title: 'A Trip Along the Coast' },
     { img: port, title: 'A Ride to the Port' },
     { img: ladakh, title: 'A Ride to Leh Ladakh' },
-    { img: himalayan, title: 'Himalayan Odyssey' },
-    { img: buddha, title: "Buddha's Footsteps" },
+    { img: himalayan, title: 'Kashmir' },
+    { img: buddha, title: "kerala" },
     { img: eastern, title: 'Eastern Vignettes' },
   ],
   PanIndia: [
-    { img: himalayan, title: 'Himalayan Odyssey' },
-    { img: buddha, title: "Buddha's Footsteps" },
+    { img: himalayan, title: 'Kashmir' },
+    { img: buddha, title: "kerala" },
     { img: eastern, title: 'Eastern Vignettes' },
     { img: coast, title: 'A Trip Along the Coast' },
     { img: port, title: 'A Ride to the Port' },
@@ -46,6 +46,7 @@ export const PopularTrips = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [orderPopup, setOrderPopup] = useState(false); // State for order popup visibility
+  const [selectedTitle, setSelectedTitle] = useState(''); // State for selected trip title
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -90,6 +91,12 @@ export const PopularTrips = () => {
     reset: true,
   });
 
+  const handleContactUs = (title) => {
+    const message = `Hello, I am interested in ${title}. Can you provide more details?`;
+    const whatsappUrl = `https://wa.me/+919032302468?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="popular-trips">
       <h1 className="main-heading">Popular Trips</h1>
@@ -123,7 +130,21 @@ export const PopularTrips = () => {
               >
                 <img src={trip.img} alt={trip.title} />
                 <h3>{trip.title}</h3>
-                <button className='orderbutton' onClick={() => setOrderPopup(true)}>Book Now</button>
+                <button
+                  className='orderbutton'
+                  onClick={() => {
+                    setSelectedTitle(trip.title);
+                    setOrderPopup(true);
+                  }}
+                >
+                  Book Now
+                </button>
+                <button
+                  className='contactbutton'
+                  onClick={() => handleContactUs(trip.title)}
+                >
+                  Contact Us
+                </button>
               </animated.div>
             ))}
           </div>
@@ -136,7 +157,7 @@ export const PopularTrips = () => {
         </div>
       </div>
       {/* Render OrderPopup component */}
-      <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+      <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} selectedTitle={selectedTitle} />
     </div>
   );
 };

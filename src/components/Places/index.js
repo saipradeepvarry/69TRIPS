@@ -1,4 +1,3 @@
-// Path: src/Places.js
 import React from "react";
 import './index.css';
 import PlaceCard from "./PlaceCard";
@@ -14,7 +13,7 @@ const Places = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
   const [popupPosition, setPopupPosition] = React.useState({ x: 0, y: 0 });
 
-  const handleOrderPopup = (e) => {
+  const handleOrderPopup = (e, title) => {
     setPopupPosition({ x: e.clientX, y: e.clientY });
     setOrderPopup(true);
   };
@@ -84,7 +83,7 @@ const Places = () => {
             price={3200}
             type="Cultural Heritage"
           />
-           <PlaceCard
+          <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637286/OIP_2_ahhlj2.jpg"
             title="Mysore Palace"
@@ -96,7 +95,7 @@ const Places = () => {
           <PlaceCard
             handleOrderPopup={handleOrderPopup}
             img="https://res.cloudinary.com/djlhr4ycg/image/upload/v1718637287/1560622581_1560622568625_ka7joa.jpg"
-            title="Shimla Hills"
+            title="Kashmir"
             location="Shimla, Himachal Pradesh"
             description="Enjoy the scenic beauty and colonial charm of Shimla amidst the Himalayan foothills."
             price={3000}

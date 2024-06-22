@@ -2,7 +2,13 @@ import React from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import './index.css';
 
-const OrderPopup = ({ orderPopup, setOrderPopup }) => {
+const OrderPopup = ({ orderPopup, setOrderPopup, selectedTitle }) => {
+  const handleContactUs = () => {
+    const message = `Hello, I am interested in ${selectedTitle}. Can you provide more details?`;
+    const whatsappUrl = `https://wa.me/+919032302468?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <>
       {orderPopup && (
@@ -40,7 +46,10 @@ const OrderPopup = ({ orderPopup, setOrderPopup }) => {
                 className="w-full rounded-full border border-gray-300 dark:border-gray-500 dark:bg-gray-800 px-2 py-1 mb-4 text-black dark:text-white"
               />
               <div className="flex justify-center">
-                <button className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-black py-1 px-4 rounded-full ">
+                <button
+                  className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-black py-1 px-4 rounded-full"
+                  onClick={handleContactUs}
+                >
                   Book Now
                 </button>
               </div>
