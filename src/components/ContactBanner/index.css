@@ -1,69 +1,123 @@
-/* ContactBanner.css */
-
+/* Banner Container */
 .banner {
-    position: relative;
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
-    overflow: hidden; /* Ensure the background animation stays within the banner */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Enable 3D perspective */
+  background-color: #333; /* Dark background for contrast */
+}
+
+/* Background Animation */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #4ecdc4, #06d6a0, #ff6b6b, #16df59, #f44174, #3f51b5);
+  background-size: 600% 600%; /* Increase size for smoother animation */
+  animation: gradientAnimation 5s ease infinite;
+  transform-style: preserve-3d; /* Preserve 3D space for children */
+  will-change: transform; /* Improve performance by hinting to the browser */
+  transition: transform 1s ease; /* Smooth transition for parallax effect */
+  z-index: 1; /* Ensure it stays behind the content */
+}
+
+/* Additional Layer for More Depth */
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay for depth */
+  transform: translateZ(-25px); /* Slightly behind the main background */
+  z-index: 1; /* Ensure it stays behind the content */
+}
+
+/* Banner Content */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  transform: translateZ(50px); /* Bring the content forward in 3D space */
+  animation: contentAnimation 5s ease infinite alternate; /* Add animation */
+  transition: transform 1s ease; /* Smooth transition for parallax effect */
+}
+
+/* Banner Title */
+.banner-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+}
+
+/* Banner Subtitle */
+.banner-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add text shadow */
+}
+
+/* Contact Button */
+.contact-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6600; /* Button background color */
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: translateZ(75px); /* Bring the button even further in 3D space */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add box shadow */
+}
+
+.contact-button:hover {
+  background-color: #e65300; /* Button hover color */
+  transform: scale(1.1) translateZ(75px); /* Slightly enlarge on hover */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .background-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #4ecdc4, #06d6a0, #ff6b6b, #ffa400); /* Gradient colors for animation */
-    background-size: 400% 400%; /* Increase size for smoother animation */
-    animation: gradientAnimation 15s ease infinite; /* Animation for moving gradient */
+  25% {
+    background-position: 50% 50%;
   }
-  
-  .banner-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #ffffff;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .banner-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+  75% {
+    background-position: 50% 50%;
   }
-  
-  .banner-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .contact-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600; /* Button background color */
-    color: #ffffff;
-    font-size: 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+}
+
+/* Keyframes for Content Animation */
+@keyframes contentAnimation {
+  0% {
+    transform: translateZ(50px) translateY(0);
   }
-  
-  .contact-button:hover {
-    background-color: #e65300; /* Button hover color */
+  100% {
+    transform: translateZ(50px) translateY(-10px); /* Slight vertical movement */
   }
-  
-  /* Keyframes for gradientAnimation */
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
+}
+
+/* Parallax Effect on Hover */
+.banner:hover .background-animation {
+  transform: translateZ(-50px) scale(1.1);
+}
+
+.banner:hover .banner-content {
+  transform: translateZ(100px);
+}

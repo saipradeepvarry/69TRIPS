@@ -11,12 +11,12 @@ const videos = [
 const VideoTour = () => {
   const [playingIndex, setPlayingIndex] = useState(null);
 
-  const handlePlay = (index) => {
-    setPlayingIndex(index);
+  const handlePause = () => {
+    setPlayingIndex(null); // Pause all videos if clicking elsewhere or outside a video
   };
 
-  const handlePause = () => {
-    setPlayingIndex(null);
+  const handleVideoClick = (index) => {
+    setPlayingIndex(index); // Start playing the clicked video
   };
 
   return (
@@ -24,18 +24,23 @@ const VideoTour = () => {
       <h1 className="video-tour-head">VIDEO TOUR</h1>
       <div className="video-tour-container">
         {videos.map((video, index) => (
-          <div
-            key={index}
-            className={`video-wrapper ${playingIndex === null || playingIndex === index ? "show" : "show"}`}
-          >
-            <div className="styled-react-player">
+          <div key={index} className={`video-wrapper ${playingIndex === index ? 'show' : 'show'}`}>
+            <div className="styled-react-player" onClick={() => handleVideoClick(index)}>
               <ReactPlayer
                 url={video}
                 width="100%"
                 height="100%"
                 playing={playingIndex === index}
-                onPlay={() => handlePlay(index)}
+                controls={true} // Show controls for each video
                 onPause={handlePause}
+                muted={false} // Allow videos to play with sound
+                config={{
+                  youtube: {
+                    playerVars: {
+                      autoplay: 0, // Autoplay disabled initially
+                    },
+                  },
+                }}
               />
             </div>
           </div>

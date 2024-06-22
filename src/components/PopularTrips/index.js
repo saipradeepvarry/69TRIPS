@@ -131,7 +131,7 @@ export const PopularTrips = () => {
                 <img src={trip.img} alt={trip.title} />
                 <h3>{trip.title}</h3>
                 <button
-                  className='orderbutton'
+                  className='contactbutton'
                   onClick={() => {
                     setSelectedTitle(trip.title);
                     setOrderPopup(true);
@@ -140,7 +140,7 @@ export const PopularTrips = () => {
                   Book Now
                 </button>
                 <button
-                  className='contactbutton'
+                  className='orderbutton'
                   onClick={() => handleContactUs(trip.title)}
                 >
                   Contact Us
